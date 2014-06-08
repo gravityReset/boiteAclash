@@ -1,0 +1,49 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="BoiteAClash.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+   
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="DataTemplatePhoto">
+            <Grid Width="150" Height="150" Tap="Element_OnTap" Margin="4">
+                <Image x:Name="imageItem" Width="150" Height="150"  Source="{Binding Image}"/>
+                <TextBlock Margin="5" Text="{Binding Txt}" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+            </Grid>
+        </DataTemplate>
+        <ItemsPanelTemplate x:Key="PanelTemplatePhoto">
+            <controls:WrapPanel />
+        </ItemsPanelTemplate>
+    </phone:PhoneApplicationPage.Resources>
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition  />
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding Source={StaticResource LocalizedStrings}
+            ,Path=LocalizedResources.ApplicationTitle}" FontFamily="Segoe WP Light" FontSize="50"/>
+        
+        <MediaElement x:Name="mediaAudio" 
+              Width="0" AutoPlay="False" MediaEnded="MediaAudio_OnMediaEnded" />
+        <Grid Grid.Row="1" Margin="4,20,0,0">
+            <ListBox x:Name="collectionClash" 
+                     ItemsSource="{Binding Clashes}"
+                     ItemTemplate="{StaticResource DataTemplatePhoto}" 
+                     ItemsPanel="{StaticResource PanelTemplatePhoto}" />
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
