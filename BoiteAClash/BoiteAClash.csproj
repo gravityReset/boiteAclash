@@ -169,6 +169,7 @@
     <Content Include="README_FIRST.txt" />
     <Content Include="Resources\img\badjoke.png" />
     <Content Include="Resources\img\bagare.jpg" />
+    <Content Include="Resources\img\horse.png" />
     <Content Include="Resources\img\jeuxdemot.jpg" />
     <Content Include="Resources\img\Mother.jpg" />
     <Content Include="Resources\img\PoPoPo.png" />

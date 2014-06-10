@@ -84,6 +84,12 @@ namespace BoiteAClash
                             Play(Listes.Clashes.First(c => c.Txt.Contains("bagarre")));
                         if (phraseTopicContents.Contains("mot"))
                             Play(Listes.Clashes.First(c => c.Txt.Contains("mot")));
+                        if (phraseTopicContents.Contains("poua"))
+                            Play(Listes.Clashes.First(c => c.PathImage.Contains("badjoke")));
+                        if (phraseTopicContents.Contains("cheval"))
+                            Play(Listes.Clashes.First(c => c.Txt.Contains("horse")));
+                        if (phraseTopicContents.Contains("mere"))
+                            Play(Listes.Clashes.First(c => c.Txt.Contains("mère")));
                     }
                     break;
             }

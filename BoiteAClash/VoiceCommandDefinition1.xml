@@ -28,7 +28,7 @@
     <Command Name="Play" >
       <Example> popopo </Example>
       <ListenFor> [jouer] {cmd} </ListenFor>
-      <Feedback> Lance {cmd}... </Feedback>
+      <Feedback> ... </Feedback>
       <Navigate Target="MainPage.xaml" />
     </Command>
 
@@ -36,6 +36,9 @@
       <Item> popopo </Item>
       <Item> la bagarre </Item>
       <Item> jeu de mot </Item>
+      <Item> ta mère </Item>
+      <Item> cheval </Item>
+      <Item> poua poua </Item>
     </PhraseList>
 
   </CommandSet>
