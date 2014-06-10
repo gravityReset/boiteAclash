@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+  <CommandSet xml:lang="en-US">
+    <CommandPrefix>Clash</CommandPrefix>
+    <Example> popopo </Example>
+
+
+    <Command Name="Play" >
+      <Example> popopo </Example>
+      <ListenFor> [play] {cmd} </ListenFor>
+      <Feedback> ... </Feedback>
+      <Navigate Target="MainPage.xaml" />
+    </Command>
+
+    <PhraseList Label="cmd" >
+      <Item> popopo </Item>
+      <Item> la bagarre </Item>
+      <Item> jeu de mot </Item>
+    </PhraseList>
+
+  </CommandSet>
+  <CommandSet xml:lang="fr-FR">
+    <CommandPrefix>Clash</CommandPrefix>
+    <Example> popopo </Example>
+
+
+    <Command Name="Play" >
+      <Example> popopo </Example>
+      <ListenFor> [jouer] {cmd} </ListenFor>
+      <Feedback> Lance {cmd}... </Feedback>
+      <Navigate Target="MainPage.xaml" />
+    </Command>
+
+    <PhraseList Label="cmd" >
+      <Item> popopo </Item>
+      <Item> la bagarre </Item>
+      <Item> jeu de mot </Item>
+    </PhraseList>
+
+  </CommandSet>
+</VoiceCommands>
+
